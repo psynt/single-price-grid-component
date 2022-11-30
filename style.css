@@ -1,0 +1,125 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    --grayish-blue: hsl(218, 22%, 67%);
+    --light-gray: hsl(204, 43%, 93%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    /* --dark-cyan: hsl(179, 62%, 23%); */
+    --dark-cyan: hsl(179, 62%, 43%);
+    --cyan: hsl(179, 62%, 60%);
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    display: grid;
+    align-content: center;
+    min-height: 100vh;
+    background-color: lightgray;
+
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        'top top'
+        'left right';
+    grid-template-columns: 50% 50%;
+    margin: auto;
+    min-width: 600px;
+    border-radius: .6rem;
+    overflow: hidden;
+}
+
+h1 {
+    color: var(--dark-cyan);
+}
+
+h2 {
+    font-size: larger;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    color: var(--cyan);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.pricing {
+    margin-top: 1rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    margin-bottom: .2rem;
+}
+
+.price {
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+.pricingDetails {
+    font-size: small;
+    margin-bottom: .2rem;
+}
+
+.top,
+.left,
+.right {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.top {
+    grid-area: top;
+    background-color: white;
+    color: gray;
+}
+
+.left {
+    grid-area: left;
+    background-color: var(--dark-cyan);
+    color: whitesmoke;
+}
+
+.right {
+    grid-area: right;
+    background-color: var(--cyan);
+    color: whitesmoke;
+}
+
+
+.signup {
+    background-color: var(--bright-yellow);
+    min-width: 90%;
+    margin: auto;
+    display: block;
+    padding: .8rem;
+    text-align: center;
+    color: whitesmoke;
+    box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.2);
+    border-radius: .3rem;
+}
+
+@media (max-width: 600px) {
+    main {
+        grid-template-areas:
+            "top"
+            "left"
+            "right";
+        grid-template-columns: 100%;
+        min-width: 300px;
+    }
+}
